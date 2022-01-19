@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalculadoraController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -22,4 +23,14 @@ Route::get('/', [
 Route::get('/classes/{job}',[
     HomeController::class,
     'classes'
+]);
+
+Route::get('/calculadora',[
+    CalculadoraController::class,
+    'calculadora'
+]);
+
+Route::post('/soma',[
+    CalculadoraController::class,
+    'soma'
 ]);
